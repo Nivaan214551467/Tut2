@@ -7,10 +7,10 @@ public:
 
 	Fraction getNumDenom();			//Declaration of all methods
 	void setNumDenom(int, int);
-	Fraction add(Fraction);
-	Fraction subtract(Fraction);
-	Fraction multiply(Fraction);
-	Fraction divide(Fraction);
+	Fraction operator+(Fraction);
+	Fraction operator-(Fraction);
+	Fraction operator*(Fraction);
+	Fraction operator/(Fraction);
 	void print();
 	int hcf(int, int);
 };

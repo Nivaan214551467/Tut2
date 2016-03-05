@@ -19,18 +19,18 @@ void Fraction::setNumDenom(int x, int y){	//Sets the fraction to the values give
 }
 
 
-Fraction Fraction::add(Fraction x){			//Adds the Fraction to another given Fraction
+Fraction Fraction::operator+(Fraction x){			//Adds the Fraction to another given Fraction
 	return Fraction(((num*x.denom) + (x.num * denom)), (denom * x.denom));
 }
 
-Fraction Fraction::subtract(Fraction x){	//Subtracts a given fration from this fraction
+Fraction Fraction::operator-(Fraction x){	//Subtracts a given fration from this fraction
 	return Fraction(((num*x.denom) - (x.num * denom)), (denom * x.denom));
 }
 
-Fraction Fraction::multiply(Fraction x){	//Multiplies two fractions
+Fraction Fraction::operator*(Fraction x){	//Multiplies two fractions
 	return Fraction((num*x.num), (denom * x.denom));
 }
-Fraction Fraction::divide(Fraction x){		//Divides two frations
+Fraction Fraction::operator/(Fraction x){		//Divides two frations
 	return Fraction((num * x.denom), (denom * x.num));
 }
 	
