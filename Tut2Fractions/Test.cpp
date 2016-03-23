@@ -5,42 +5,30 @@ using namespace std;
 
 int main()
 {
+	
 	Fraction frac1(1,1);	//creates a Fraction object
 	Fraction frac2(1,1);	//creates another Fraction object
 	Fraction temp(1,1);		//creates a temp Fraction object to store results
 
-	int x, y;				//used to assign values to the fraction
-
-	cout << "Enter the numerator for Fraction 1 :";
-	cin >> x;				//gets numerator for Fraction 1
-	cout << "Enter the denominator for Fraction 1 :";
-	cin >> y;				//gets denominator for Fraction 1
-
-	frac1.setNumDenom(x, y);	//sets values to the object
-
-	cout << "Enter the numerator for Fraction 2 :";
-	cin >> x;				//gets numerator for Fraction 2
-	cout << "Enter the denominator for Fraction 2 :";
-	cin >> y;				//gets denominator for Fraction 2
-
-	frac2.setNumDenom(x, y);	//sets values to the object
-
+	
+	cout << "Enter the numerator followed by the denominator for Fraction 1 :";
+	cin >> frac1;				//overloads the >> operator to insert values into frac1
+	
+	cout << "Enter the numerator followed by the denominator for Fraction 2 :";
+	cin >> frac2;				//overloads the >> operator to insert values into frac2
+	
 	cout << "" << endl;
 	cout << "Addition : ";
-	temp = frac1.operator+(frac2);		//adds frac1 and frac2 and stores in temp
-	temp.print();
+	cout << (frac1 + frac2);	//uses operator overloading to add (+) the fractions and to display them (<<)
 
 	cout << "Subtraction : ";
-	temp = frac1.operator-(frac2);		//subtracts frac1 and frac2 and stores in temp
-	temp.print();
-	
+	cout << (frac1 - frac2);	//uses operator overloading to subtract (-) the fractions and to display them (<<)
+
 	cout << "Multiplication : ";
-	temp = frac1.operator*(frac2);		//multiplies frac1 and frac2 and stores in temp
-	temp.print();
+	cout << (frac1 * frac2);	//uses operator overloading to multiply (*) the fractions and to display them (<<)
 	
 	cout << "Division : ";
-	temp = frac1.operator/(frac2);		//divides frac1 and frac2 and stores in temp
-	temp.print();
-
-
+	cout << (frac1 / frac2);	//uses operator overloading to divide (/) the fractions and to display them (<<)
 }
+
+

@@ -49,3 +49,4 @@ void Fraction::print(){						//prints the fraction in simplest form
 	else
 	    cout << (num / hcf(num, denom)) << "/" << (denom / hcf(num, denom))<<endl;
 }
+
